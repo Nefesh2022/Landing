@@ -1,5 +1,6 @@
 import styles from '@/styles/Error.module.css';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const ErrorScreen = () => {
   const router = useRouter()

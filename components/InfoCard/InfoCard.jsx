@@ -17,7 +17,7 @@ const InfoCard = ({ title, text, srcImage, className }) => {
         {
           Array.isArray(text)
             ? text.map(txt => (
-              <p className={styles.text}>{txt}</p>
+              <p key={txt} className={styles.text}>{txt}</p>
             ))
             : <p className={styles.text}>{text}</p>
         }
