@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const basePath = '/nefesh';
+const basePath = '/';
 
 const nextConfig = {
   reactStrictMode: true,
