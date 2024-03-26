@@ -1,0 +1,182 @@
+.container {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  padding-top: 4rem;
+}
+
+.outter {
+  width: 100vw;
+  height: max-content;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* Hide scrollbar */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.inner {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Hide scrollbar */
+.outter::-webkit-scrollbar {
+  display: none;
+}
+
+.inner>* {
+  scroll-snap-align: center;
+}
+
+.chevronContainer {
+  width: 6.25rem;
+  height: 6.25rem;
+  flex-shrink: 0;
+  background-color: #305a50cc;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 3.125rem);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.chevron {
+  width: auto;
+  height: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.chevronContainer.left {
+  left: 4rem;
+}
+
+.chevronContainer.right {
+  right: 4rem;
+}
+
+.indexers {
+  width: max-content;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--dark-green);
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+@keyframes bounceLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-1.5rem);
+  }
+
+  80% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(1.5rem);
+  }
+
+  80% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 740px) {
+
+  .container,
+  .outter {
+    width: 100vw;
+  }
+
+  .chevron {
+    position: absolute;
+    margin: 0 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .chevronContainer {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 1.25rem);
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .inner {
+    align-items: center;
+  }
+
+  .chevron {
+    height: 2rem;
+  }
+
+  .chevronContainer.left {
+    left: 2.5rem;
+  }
+
+  .chevronContainer.right {
+    right: 2.5rem;
+  }
+
+  .indexers {
+    gap: 0.5rem;
+  }
+
+  .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}

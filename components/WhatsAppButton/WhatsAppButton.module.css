@@ -1,0 +1,63 @@
+.container {
+  position: fixed;
+  bottom: .3rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+.button {
+  border-radius: 30rem;
+  background: var(--lightest-green);
+  opacity: 1;
+  border: none;
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.wpShow {
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  width: 4rem;
+  height: 4rem;
+  opacity: 1;
+  top: 15%;
+  right: 15%;
+}
+
+.wpHide {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  top: 15%;
+  right: 15%;
+}
+
+.exShow {
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  width: 2rem;
+  height: 2rem;
+  opacity: 1;
+  top: 32%;
+  right: 32%;
+}
+
+.exHide {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  top: 32%;
+  right: 32%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}

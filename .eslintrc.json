@@ -1,0 +1,10 @@
+{
+  "env": {},
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "no-undef": ["error", { "typeof": true }],
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-console": ["warn"],
+    "react-hooks/exhaustive-deps": "off"
+  }
+}

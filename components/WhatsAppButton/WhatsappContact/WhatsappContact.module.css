@@ -1,0 +1,141 @@
+.windowContainer {
+  position: absolute;
+  bottom: 0;
+  right: 7.5rem;
+  border-radius: 1.25rem;
+  background: var(--dark-green);
+  opacity: 1;
+  border: none;
+  width: 27rem;
+  height: 22rem;
+  border: none;
+  transition: width 0.5s ease-in-out;
+}
+
+.windowContainerHide {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.header {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.9rem;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.headerHide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: var(--white);
+  border-radius: 30rem;
+  margin-left: 1.3rem;
+}
+
+.socIcon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.greenIcon {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0;
+}
+
+.textContainer {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--raleway);
+}
+
+.contactContainer {
+  width: 100%;
+  height: 16rem;
+  background: url('../../public/assets/whatsapp-background.svg') no-repeat
+    center center/cover;
+  border-radius: 0 0 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.contactContainerHide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.contactButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.contactButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 16.7rem;
+  height: 3.1875rem;
+  border-radius: 1rem;
+  background: var(--grayscale-100, #fff);
+  border: none;
+  font-family: var(--raleway);
+  font-weight: var(--medium);
+  font-size: 1.12rem;
+  cursor: pointer;
+  padding-left: 2rem;
+}
+
+.triangle {
+  position: absolute;
+  top: -0.1rem;
+  right: -0.8rem;
+  z-index: 2;
+}
+
+.chatButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 12.4375rem;
+  height: 2.7875rem;
+  border-radius: 1.875rem;
+  background: var(--lightest-green);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  color: var(--white);
+  font-family: var(--raleway);
+  font-size: 1rem;
+  font-weight: var(--medium);
+  cursor: pointer;
+}
+
+.citizenshipSpan {
+  text-transform: capitalize;
+}
