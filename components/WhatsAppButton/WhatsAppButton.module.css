@@ -1,6 +1,6 @@
 .container {
   position: fixed;
-  bottom: .3rem;
+  bottom: 0.3rem;
   right: 1rem;
   z-index: 2;
 }
@@ -10,8 +10,8 @@
   background: var(--lightest-green);
   opacity: 1;
   border: none;
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   cursor: pointer;
   position: relative;
 }
@@ -19,17 +19,17 @@
 .wpShow {
   position: absolute;
   transition: opacity 0.5s ease-in-out;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   opacity: 1;
-  top: 15%;
-  right: 15%;
+  top: 19%;
+  right: 18%;
 }
 
 .wpHide {
   position: absolute;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   top: 15%;

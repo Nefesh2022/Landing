@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import { ToastContainer } from 'react-toastify';
 import AppProvider from '@/utils/context';
-import { basePath } from '@/services/constants';
 
 import 'react-toastify/dist/ReactToastify.css';
 import '@/styles/globals.css';
+import Header from '@/components/Header/header';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -25,7 +25,10 @@ function MyApp({ Component, pageProps }) {
           pauseOnHover
           theme="colored"
         />
-        <Component {...pageProps} />
+        <main className="mainContainer">
+          <Header />
+          <Component {...pageProps} />
+        </main>
       </AppProvider>
     </>
   );

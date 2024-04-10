@@ -61,15 +61,24 @@ const Carousel = ({
   };
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      if (currentSlide === slidesCount - 1) {
+        goToSlide(0);
+        return;
+      }
+      goNext();
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [currentSlide]);
+
+  useEffect(() => {
     carouselElementRef.current.addEventListener('scroll', handleScroll);
     return () =>
       carouselElementRef.current?.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div
-      className={styles.container}
-    >
+    <div className={styles.container}>
       <div className={styles.outter} ref={carouselElementRef}>
         {!isFirstSlide && (
           <div
@@ -129,7 +138,7 @@ Carousel.defaultProps = {
   slideWidth: '100vw',
   slides: [],
   currentSlide: 0,
-  onSlideChange: () => { },
+  onSlideChange: () => {},
 };
 
 export default Carousel;
