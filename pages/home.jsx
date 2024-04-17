@@ -4,23 +4,23 @@ import Img from '@/components/Img';
 import styles from '@/styles/Home.module.css';
 import { useState } from 'react';
 
-import image2 from '../public/assets/image2.jpg';
-import image5 from '../public/assets/image5.jpg';
-import image6 from '../public/assets/image6.jpg';
-import image9 from '../public/assets/image9.jpg';
-import image10 from '../public/assets/image10.jpg';
+import image1 from '../public/assets/image1.png';
+import image2 from '../public/assets/image2.png';
+import image3 from '../public/assets/image3.png';
+import image4 from '../public/assets/image4.png';
+import image5 from '../public/assets/image5.png';
 import workImage from '../public/assets/workingImage2.jpg';
 
-import dia from '../public/assets/dia.svg';
-import aim from '../public/assets/aim.svg';
-import eye from '../public/assets/eye.svg';
+import mision from '../public/assets/mision.jpg';
+import vision from '../public/assets/vision.jpg';
+import valores from '../public/assets/valores.jpg';
 
 import InfoCard from '@/components/InfoCard';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 const images = [
   {
-    image: image10,
+    image: image1,
     text: 'Experimenta la elegancia y la comodidad con nuestras cortinas.',
   },
   {
@@ -28,29 +28,32 @@ const images = [
     text: 'Transforma tu espacio con nuestras cortinas a medida.',
   },
   {
-    image: image9,
+    image: image3,
     text: 'Personaliza cada detalle para reflejar tu estilo único.',
   },
-  { image: image5, text: 'Cambiamos la imagen de tus cortinas.' },
   {
-    image: image6,
+    image: image4,
+    text: 'Tus espacios se veran mas agradables.',
+  },
+  {
+    image: image5,
     text: 'Encuentra la combinación perfecta de estilo y funcionalidad.',
   },
 ];
 
 const cards = [
   {
-    image: aim,
+    image: mision,
     title: 'Misión',
     text: 'Ofrecer un servicio de venta e instalación de cortinas roller, en tiempo y forma, con el objetivo de dar solución satisfactoria a nuestros clientes con precios muy competitivos',
   },
   {
-    image: eye,
+    image: vision,
     title: 'Visión',
     text: 'Ser una empresa referente en Mendoza que alcance un estandar de calidad que la distinga por la excelencia de la prestación de sus servicios',
   },
   {
-    image: dia,
+    image: valores,
     title: 'Valores',
     text: ['Eficiencia y calidad', 'Responsabilidad', 'Integridad', 'Pasión'],
   },
@@ -72,7 +75,6 @@ export default function Home() {
               height={600}
               alt={`slide-${i}`}
             />
-            asd
             <span className={styles.text}>{image.text}</span>
           </div>
         ))}

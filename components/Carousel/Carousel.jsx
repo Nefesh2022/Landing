@@ -67,7 +67,7 @@ const Carousel = ({
         return;
       }
       goNext();
-    }, 2000);
+    }, 3000);
     return () => clearTimeout(timer);
   }, [currentSlide]);
 
